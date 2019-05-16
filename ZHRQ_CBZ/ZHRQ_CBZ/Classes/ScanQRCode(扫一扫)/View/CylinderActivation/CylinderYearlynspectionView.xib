@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CylinderYearlynspectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dvv-Kn-UJG">
+                    <rect key="frame" x="0.0" y="49.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="i9k-VQ-WJt"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年检时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-GX-K1a">
+                    <rect key="frame" x="15" y="0.0" width="61.5" height="49.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择年检时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Han-5l-wUI">
+                    <rect key="frame" x="106.5" y="0.0" width="107.5" height="49.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g09-Od-YLx">
+                    <rect key="frame" x="325" y="0.0" width="50" height="49.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="eEc-GN-9v0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Han-5l-wUI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Fl-SH-BHT"/>
+                <constraint firstItem="uaD-GX-K1a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="LeK-Vw-JYQ"/>
+                <constraint firstItem="g09-Od-YLx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MJc-OG-QTh"/>
+                <constraint firstItem="Han-5l-wUI" firstAttribute="leading" secondItem="uaD-GX-K1a" secondAttribute="trailing" constant="30" id="VJZ-ou-cBn"/>
+                <constraint firstAttribute="trailing" secondItem="Dvv-Kn-UJG" secondAttribute="trailing" id="Vjn-57-XCF"/>
+                <constraint firstItem="Dvv-Kn-UJG" firstAttribute="top" secondItem="uaD-GX-K1a" secondAttribute="bottom" id="a5p-43-vXc"/>
+                <constraint firstItem="Dvv-Kn-UJG" firstAttribute="top" secondItem="g09-Od-YLx" secondAttribute="bottom" id="dOa-9v-TqJ"/>
+                <constraint firstItem="Dvv-Kn-UJG" firstAttribute="top" secondItem="Han-5l-wUI" secondAttribute="bottom" id="emZ-dR-SW3"/>
+                <constraint firstItem="uaD-GX-K1a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fqh-SN-T8M"/>
+                <constraint firstAttribute="trailing" secondItem="g09-Od-YLx" secondAttribute="trailing" id="khu-2S-Yl3"/>
+                <constraint firstAttribute="bottom" secondItem="Dvv-Kn-UJG" secondAttribute="bottom" id="qum-rF-06v"/>
+                <constraint firstItem="Dvv-Kn-UJG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yTj-Ee-XjQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="arrowLabel" destination="g09-Od-YLx" id="szY-IA-W3g"/>
+                <outlet property="selectedLabel" destination="Han-5l-wUI" id="bfd-w0-mf1"/>
+            </connections>
+            <point key="canvasLocation" x="-16" y="38"/>
+        </view>
+    </objects>
+</document>

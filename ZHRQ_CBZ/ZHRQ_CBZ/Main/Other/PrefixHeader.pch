@@ -1,0 +1,141 @@
+//
+//  PrefixHeader.pch
+//  ZTXWY
+//
+//  Created by Mr Lai on 2017/5/16.
+//  Copyright © 2017年 Mr LAI. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/****************************** 头部导入 **********************************/
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <objc/runtime.h>
+
+/** 第三方 */
+#import <SVProgressHUD.h>
+#import <MJRefresh.h>
+#import <MJExtension.h>
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import "HZPhotoBrowser.h"
+#import "KNActionSheet.h"
+#import <POP.h>
+#import "SVProgressHUD+DGActivityIndicatorView.h"
+
+/** 拓展类 */
+#import "Const.h"
+#import "SaveTool.h"
+#import "HttpTool.h"
+#import "NormalBottomView.h"
+#import "UIView+Extension.h"
+#import "UIColor+Extension.h"
+#import "NSString+Extension.h"
+#import "NSDate+Extension.h"
+#import "UITableViewCell+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "MBProgressHUD+LAI.h"
+#import "VerificationTool.h"
+#import "NavigationController.h"
+#import "TabBarViewController.h"
+#import "TextView.h"
+#import "LaiMethod.h"
+#import "ItemTextCell.h"
+#import "ItemTextFiledCell.h"
+#import "CustomDatePicker.h"
+#import "NoDataCell.h"
+#import "ItemArrowCell.h"
+#import "ItemSelectBtnCell.h"
+#import "KSDatePicker.h"
+#import "ItemTextViewCell.h"
+#import "ItemAddPhotoCell.h"
+#import "ItemTitleArrowCell.h"
+#import "NSArray+Estension.h"
+#import "NoPermissionCell.h"
+#import "BaseViewController.h"
+#import "SVProgressHUD+Extension.h"
+#import "UIImage+Extension.h"
+#import "WKWebBaseVC.h"
+#import "BasePageVC.h"
+#import "UITableViewHeaderFooterView+Extension.h"
+#import "UIWindow+Extension.h"
+#import "AudioTool.h"
+#import "NoDataCollectionViewCell.h"
+#import "AlertPopViewTool.h"
+#endif
+
+/****************************** 自定义宏区 **********************************/
+/// weakSelf宏
+#define WeakSelf(weakSelf)      __weak __typeof(&*self)    weakSelf  = self;
+#define StrongSelf(strongSelf)  __strong __typeof(&*self) strongSelf = weakSelf;
+
+// 随机颜色
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1.0]
+
+/// 设置颜色的rgb
+#define SetupColor(r, g, b) [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha:1.0]
+
+/// 设置颜色的rgb加透明度
+#define SetupColorWithAlpha(r, g, b, a) [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha:(a)]
+
+/// 设置系统字体大小
+#define TextSystemFont(vaule) [UIFont systemFontOfSize:(vaule)]
+
+/// 设置粗体字体大小
+#define TextBoldFont(vaule) [UIFont boldSystemFontOfSize:(vaule)]
+
+/// 定义字符串转NSURL的宏
+#define SetURL(url) [NSURL URLWithString:(url)]
+
+/// 定义UIImage的宏
+#define SetImage(imgName) [UIImage imageNamed:(imgName)]
+
+/// 屏幕的尺寸
+#define MainScreenSize [UIScreen mainScreen].bounds.size
+
+/// 网络请求状态显示的宏
+#define NetworkActivity [UIApplication sharedApplication].networkActivityIndicatorVisible
+
+/// 图标字体
+#define IconFont(a)   [UIFont fontWithName:@"iconfont" size:a]
+
+/// 获取当前window
+#define CurrentWindow [UIWindow getCurrentWindowView]
+
+#define CurrentViewController [UIWindow getCurrentVC]
+
+/// 自定义log
+#ifdef DEBUG // 正处于开发阶段
+#define Log(...) NSLog(__VA_ARGS__)
+#else // 正处于发布阶段
+#define Log(...)
+#endif
+
+/// 常用颜色宏
+#define GlobalBgColor         [UIColor colorWithHex:@"#f0f0f0"] 
+
+/// 高度根据数据屏幕长度计算等比高
+#define RateHeight(Height) ([UIScreen mainScreen].bounds.size.width) /320 * (Height)
+
+/// 6P专属字体
+#define RateFont(font) iPhone6P ? [UIFont systemFontOfSize:(font + 1.5)] : [UIFont systemFontOfSize:font]
+
+/// 主屏幕高度的宏
+#define iPhone6P (MainScreenSize.height == 736)
+#define iPhone6 (MainScreenSize.height == 667)
+#define iPhone5 (MainScreenSize.height == 568)
+#define iPhone4 (MainScreenSize.height == 480)
+
+#define IdTransfrom + (NSDictionary *)mj_replacedKeyFromPropertyName {\
+return @{\
+         @"ID" : @"id"\
+         };\
+}
+
+#endif /* PrefixHeader_pch */
+

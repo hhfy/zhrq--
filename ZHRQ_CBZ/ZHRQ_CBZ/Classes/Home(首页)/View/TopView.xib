@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TopView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="矩形" translatesAutoresizingMaskIntoConstraints="NO" id="ow2-js-laX" userLabel="BGImage">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYX-9F-6TX" userLabel="NavView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axU-Kt-UCG">
+                            <rect key="frame" x="10" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="yeL-nL-BoP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="登出">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bo-bl-VU9">
+                            <rect key="frame" x="315" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Ekb-gN-igL"/>
+                                <constraint firstAttribute="width" constant="50" id="jM8-6G-Ctg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <state key="normal" title="图">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="锡山智慧燃气" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-XV-E01">
+                            <rect key="frame" x="132" y="0.0" width="111" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NwR-XV-E01" firstAttribute="centerX" secondItem="bYX-9F-6TX" secondAttribute="centerX" id="4FL-7c-LiU"/>
+                        <constraint firstItem="axU-Kt-UCG" firstAttribute="leading" secondItem="bYX-9F-6TX" secondAttribute="leading" constant="10" id="8rj-OL-4Bm"/>
+                        <constraint firstAttribute="bottom" secondItem="axU-Kt-UCG" secondAttribute="bottom" id="O6f-8s-IWp"/>
+                        <constraint firstItem="NwR-XV-E01" firstAttribute="top" secondItem="bYX-9F-6TX" secondAttribute="top" id="R62-N9-lD2"/>
+                        <constraint firstItem="5bo-bl-VU9" firstAttribute="top" secondItem="bYX-9F-6TX" secondAttribute="top" id="WYi-9T-z33"/>
+                        <constraint firstItem="axU-Kt-UCG" firstAttribute="top" secondItem="bYX-9F-6TX" secondAttribute="top" id="aYk-Mj-jGE"/>
+                        <constraint firstAttribute="bottom" secondItem="5bo-bl-VU9" secondAttribute="bottom" id="gSc-6f-uTW"/>
+                        <constraint firstAttribute="bottom" secondItem="NwR-XV-E01" secondAttribute="bottom" id="hZT-Jj-PQ7"/>
+                        <constraint firstAttribute="trailing" secondItem="5bo-bl-VU9" secondAttribute="trailing" constant="10" id="sYA-c0-Cfg"/>
+                        <constraint firstAttribute="height" constant="44" id="tan-7G-UFz"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="锡山区燃气储备总站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4G3-mu-rnW">
+                    <rect key="frame" x="119" y="84" width="138" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="民丰路198号锋尚文创" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5Z-2j-wpr">
+                    <rect key="frame" x="123" y="112" width="129" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333333333335" green="0.95270901918411255" blue="0.97345095872879028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="i5Z-2j-wpr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XTb-63-cTG"/>
+                <constraint firstItem="bYX-9F-6TX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XUe-ej-dNa"/>
+                <constraint firstAttribute="trailing" secondItem="bYX-9F-6TX" secondAttribute="trailing" id="ZyN-La-bta"/>
+                <constraint firstItem="ow2-js-laX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aSx-qh-HYy"/>
+                <constraint firstItem="4G3-mu-rnW" firstAttribute="top" secondItem="bYX-9F-6TX" secondAttribute="bottom" constant="20" id="b4h-k9-gCS"/>
+                <constraint firstItem="i5Z-2j-wpr" firstAttribute="top" secondItem="4G3-mu-rnW" secondAttribute="bottom" constant="10" id="c1U-vm-gpb"/>
+                <constraint firstItem="4G3-mu-rnW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d7Q-x9-SZa"/>
+                <constraint firstAttribute="trailing" secondItem="ow2-js-laX" secondAttribute="trailing" id="ipc-Zx-KZz"/>
+                <constraint firstItem="bYX-9F-6TX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="iqN-1Q-hh3"/>
+                <constraint firstItem="ow2-js-laX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xWu-Vy-IqH"/>
+                <constraint firstAttribute="bottom" secondItem="ow2-js-laX" secondAttribute="bottom" constant="10" id="zt1-T5-O68"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="QRCodeBtn" destination="5bo-bl-VU9" id="hOh-bZ-xDe"/>
+                <outlet property="addressLabel" destination="i5Z-2j-wpr" id="Vu9-to-YGT"/>
+                <outlet property="loginOutBtn" destination="axU-Kt-UCG" id="sAb-oy-54h"/>
+                <outlet property="nameLabel" destination="4G3-mu-rnW" id="8NS-BH-fnw"/>
+            </connections>
+            <point key="canvasLocation" x="-83" y="11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="矩形" width="375" height="100"/>
+    </resources>
+</document>
